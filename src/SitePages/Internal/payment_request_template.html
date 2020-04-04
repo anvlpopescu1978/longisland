@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        @page {
+            size: A4;
+        }
+
+        body {
+            font-family:Arial;
+            font-size: 12px;
+        }
+
+        table.table-appointments thead th {
+            background-color:#808080;
+            color:#FFF;
+        }
+
+        table.table-appointments tfoot td {
+            background-color: #808080;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+            <td style="width:25px; white-space:nowrap; font-size:10px">
+                <strong>173 N Main Street Suite 213</strong><br />
+                <strong>Sayville, NY 11782</strong><br />
+                <strong>Sayville, NY 11782</strong><br />
+                <strong>P 631.316.0426</strong><br />
+                <strong>F 631.656.0029</strong><br />
+            </td>
+            <td style="text-align:right"></td>
+        </tr>
+        <tr>
+            <td style="height:30px; text-align:center; vertical-align: middle; background-color:#EEE" colspan="2">
+                <h2>Monthly Payroll</h2><br />
+                {{Month}} {{Year}}
+            </td>
+        </tr>
+    </table><br />
+    <table style="width:100%" class="table-appointments">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>School District</th>
+                <th>Course #</th>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Duration</th>
+            </tr>
+        </thead>
+        <tbody id="sessions">
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6" id="totalAmount">
+
+                </td>
+                <td id="totalDuration">
+
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

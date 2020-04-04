@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<!DOCTYPE html>
+<html lang="en-us" runat="server"  xmlns:o="urn:schemas-microsoft-com:office:office">
+<head runat="server">
+	<meta name="GENERATOR" content="Microsoft SharePoint"/>
+	<meta name="progid" content="SharePoint.WebPartPage.Document"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Expires" content="0"/>
+    <SharePoint:RobotsMetaTag runat="server"></SharePoint:RobotsMetaTag>
+    <title><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"/></title>
+    <SharePoint:ScriptLink language="javascript" name="core.js" Localizable="false" OnDemand="false" runat="server" LoadAfterUI="True"/>
+	    <SharePoint:ScriptLink language="javascript" name="sp.js" Localizable="false" OnDemand="false" runat="server" LoadAfterUI="True"/>
+        <SharePoint:ScriptLink language="javascript" name="SP.RequestExecutor.js" Localizable="false" OnDemand="false" runat="server" LoadAfterUI="True"/>
+        <SharePoint:ScriptLink name="clienttemplates.js" runat="server" LoadAfterUI="true" Localizable="false"  OnDemand="False"/>
+        <SharePoint:ScriptLink name="clientforms.js" runat="server" LoadAfterUI="true" Localizable="false"  OnDemand="False"/>
+        <SharePoint:ScriptLink name="clientpeoplepicker.js" runat="server" LoadAfterUI="true" Localizable="false"  OnDemand="False"/>
+	    <asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server" >
+	</asp:ContentPlaceHolder>
+</head>
+<body onload="javascript:if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper();">
+<form runat="server" onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}">
+	<asp:ScriptManager id="ScriptManager" runat="server" LoadScriptsBeforeUI="false" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="false">
+		<Scripts>
+		<asp:ScriptReference Path="../../SitePages/App/Scripts/jQuery/jquery.js" />
+		
+		<asp:ScriptReference Path="../../SitePages/App/Scripts/Bootstrap/bootstrap.js" />
+		
+		<asp:ScriptReference Path="../../SitePages/App/Scripts/App.js" />
+		</Scripts>	
+	</asp:ScriptManager>
+	<WebPartPages:SPWebPartManager runat="server"/>
+        <div id="wrapper">
+             <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div style="width:400px; padding-top:10px; padding-left:10px;">
+                    <a class="navbar-brand" href="javascript:NavigateToPage('/SitePages/App/Default.aspx');">
+                    <i class="fa fa-graduation-cap"></i>&#160;Long Island Tutorial Services</a>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-md-3">
+   
+            </div>
+
+            <ul class="nav navbar-top-links navbar-right">
+
+                 <li>
+                    <div style="padding-right: 15px; line-height:46px">
+                        <span id="welcome"></span>
+                        <span id="profilepicture"></span>
+                    </div>
+                </li>
+            </ul>
+            
+        <!-- Sidebar -->
+        <div class="navbar-default sidebar" role="navigation" style="background-color:#0096D6; margin-top:52px">
+            <div class="sidebar-nav navbar-collapse">
+                 <ul class="nav" id="side-menu">
+                    <li>
+                       <a onclick="javascript:NavigateToPage('/SitePages/App/MyProfile.aspx');"><i class="fa fa-list fa-fw"></i> My Profile</a>
+                    </li>
+                    <li>
+                       <a onclick="javascript:NavigateToPage('/SitePages/App/SetMeeting.aspx');"><i class="fa fa-list fa-fw"></i> Set Appointment</a>
+                    </li>
+                    <li>
+                        <a onclick="javascript:NavigateToPage('/SitePages/App/MyAppointments.aspx');"><i class="fa fa-list fa-fw"></i> My Appointments</a>
+                    </li>
+                    <li>
+                        <a onclick="javascript:NavigateToPage('/SitePages/App/Calendar.aspx');"><i class="fa fa-list fa-fw"></i> My Calendar</a>
+                    </li>
+                    <li>
+                        <a onclick="javascript:NavigateToPage('/SitePages/App/MyPaymentRequests.aspx');"><i class="fa fa-list fa-fw"></i> My Payment Request</a>
+                    </li>
+                     <li>
+                        <a onclick="javascript:NavigateToPage('/SitePages/App/MyOffer.aspx');"><i class="fa fa-list fa-fw"></i> My Offers</a>
+                    </li>
+
+                     <li>
+                        <a onclick="javascript:NavigateToPage('/SitePages/App/MyCourses.aspx');"><i class="fa fa-list fa-fw"></i> My Courses</a>
+                    </li>
+                    <li>
+                        <a onclick="javascript:NavigateToPage('/SitePages/App/PaymentRequests.aspx');"><i class="fa fa-list fa-fw"></i> Payroll Management</a>
+                    </li>
+                     <li>
+                        <a onclick="javascript:NavigateToPage('/SitePages/App/Students.aspx');"><i class="fa fa-list fa-fw"></i> Active Students</a>
+                    </li>
+                    <li>
+                        <a onclick="javascript:NavigateToPage('/SitePages/App/InactiveStudents.aspx');"><i class="fa fa-list fa-fw"></i> Inactive Students</a>
+                    </li>
+                     <li>
+                        <a onclick="javascript:NavigateToPage('/SitePages/App/Tutors.aspx');"><i class="fa fa-list fa-fw"></i> Tutors</a>
+                    </li>
+                    <li>
+                        <a href="https://litutorialservices.sharepoint.com/sites/LItutorialservices/_layouts/15/SignOut.aspx"><i class="fa fa-list fa-fw"></i> Sign Out</a>
+                    </li>
+                 </ul>
+            </div>
+        </div>
+                    <!-- Sidebar -->
+        </nav>   
+            <div id="page-wrapper">
+          	        <asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolderMaim">
+	
+	                </asp:ContentPlaceHolder>
+            </div> 
+        </div>
+</form>
+</body>
+</html>

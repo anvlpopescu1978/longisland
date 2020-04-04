@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" %>
+<%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<!DOCTYPE html>
+<html lang="en-us" runat="server"  xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head runat="server">
+  	    <meta name="GENERATOR" content="Microsoft SharePoint"/>
+	    <meta name="progid" content="SharePoint.WebPartPage.Document"/>
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+	    <meta http-equiv="Expires" content="0"/>
+        <SharePoint:RobotsMetaTag runat="server"></SharePoint:RobotsMetaTag>
+        <title><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"/></title>
+       	<SharePoint:CssLink runat="server" Alternate="true" Version="15"/>
+        <SharePoint:ScriptLink language="javascript" name="core.js" Localizable="false" OnDemand="false" runat="server" LoadAfterUI="True"/>
+	    <SharePoint:ScriptLink language="javascript" name="sp.js" Localizable="false" OnDemand="false" runat="server" LoadAfterUI="True"/>
+        <SharePoint:ScriptLink language="javascript" name="SP.RequestExecutor.js" Localizable="false" OnDemand="false" runat="server" LoadAfterUI="True"/>
+        <SharePoint:ScriptLink name="clienttemplates.js" runat="server" LoadAfterUI="true" Localizable="false"  OnDemand="False" />
+        <SharePoint:ScriptLink name="clientforms.js" runat="server" LoadAfterUI="true" Localizable="false"  OnDemand="False" />
+        <SharePoint:ScriptLink name="clientpeoplepicker.js" runat="server" LoadAfterUI="true" Localizable="false"  OnDemand="False" />
+	    <asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server" />
+  </head>
+  <body onload="javascript:if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper();" style="background-color:#fff !important">
+  <form runat="server" onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}">
+  <asp:ScriptManager id="ScriptManager" runat="server" LoadScriptsBeforeUI="false" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="false">
+  	<Scripts>
+  		<asp:ScriptReference Path="../../SitePages/App/Scripts/jQuery/jquery.js" />
+  		<asp:ScriptReference Path="../../SitePages/App/Scripts/Bootstrap/bootstrap.js" />
+  		<asp:ScriptReference Path="../../SitePages/App/Scripts/App.js" />
+     </Scripts>
+ </asp:ScriptManager> 
+ <WebPartPages:SPWebPartManager runat="server"/>   
+ 
+ <div id="wrapper" style="box-sizing:border-box; padding:10px 20px !important">
+	 <asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolderMaim" ClientIDMode="Static">
+	
+	  </asp:ContentPlaceHolder>
+  </div> 
+  
+  </form>
+  </body>
+</html>

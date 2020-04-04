@@ -1,0 +1,11 @@
+{
+    "sourceDirectory": "src",
+    "sharePointSiteUrl": "https://litutorialservices.sharepoint.com/sites/LItutorialservices",
+    "publishingScope": "None",
+    "authenticationType": "Digest",
+    "storeCredentials": true,
+    "remoteFolders": [
+        "/_catalogs/masterpage/",
+        "/SitePages/**/*"
+    ]
+}
